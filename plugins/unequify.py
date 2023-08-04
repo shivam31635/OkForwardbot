@@ -9,8 +9,8 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 CLIENT = CLIENT()
-COMPLETED_BTN = InlineKeyboardMarkup([[InlineKeyboardButton('💟 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💟', url='https://t.me/venombotsupport')],
-                [InlineKeyboardButton('💠 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 💠', url='https://t.me/venombotupdates')]])
+COMPLETED_BTN = InlineKeyboardMarkup([[InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ •', url='https://t.me/crazysupportz')],
+                [InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ •', url='https://t.me/crazybotz')]])
 CANCEL_BTN = InlineKeyboardMarkup([[InlineKeyboardButton('• ᴄᴀɴᴄᴇʟ', 'terminate_frwd')]])
 
 # functions
@@ -52,10 +52,10 @@ async def unequify(client, message):
       return await message.reply("**please wait until previous task complete**")
    _bot = await db.get_bot(user_id)
    if not _bot or _bot['is_bot']:
-      return await message.reply("<b>Need userbot to do this process. Please add a userbot using /settings</b>")
-   target = await client.ask(user_id, text="**Forward the last message from target chat or send last message link.**\n/cancel - `cancel this process`")
+      return await message.reply("<b>ɴᴇᴇᴅ ᴜꜱᴇʀʙᴏᴛ ᴛᴏ ᴅᴏ ᴛʜɪꜱ ᴘʀᴏᴄᴇꜱꜱ. ᴘʟᴇᴀꜱᴇ ᴀᴅᴅ ᴀ ᴜꜱᴇʀʙᴏᴛ ᴜꜱɪɴɢ /settings</b>")
+   target = await client.ask(user_id, text="**ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇ ʟᴀꜱᴛ ᴍᴇꜱꜱᴀɢᴇ ꜰʀᴏᴍ ᴛᴀʀɢᴇᴛ ᴄʜᴀᴛ ᴏʀ ꜱᴇɴᴅ ʟᴀꜱᴛ ᴍᴇꜱꜱᴀɢᴇ ʟɪɴᴋ.**\n/cancel - `cancel this process`")
    if target.text.startswith("/"):
-      return await message.reply("**process cancelled !**")
+      return await message.reply("**ᴘʀᴏᴄᴇꜱꜱ ᴄᴀɴᴄᴇʟʟᴇᴅ !**")
    elif target.text:
       regex = re.compile("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")
       match = regex.match(target.text.replace("?single", ""))
