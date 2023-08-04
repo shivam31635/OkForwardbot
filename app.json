@@ -1,0 +1,38 @@
+
+{
+    "name": "ACE-AUTO_FORWARDER",
+    "description": "AUTOFORWARD",
+    "repository": "https://github.com/",
+    "keywords": [
+        "telegram bot",
+        "pyrogram"
+    ],
+    "env": {
+
+        "BOT_OWNER_ID": {
+            "description": "Your Telegram ID",
+            "required": "True"
+        },
+        "BOT_TOKEN": {
+            "description": "Get From @BotFather in Telegram",
+            "required": "True"
+        },
+        "API_ID": {
+            "description": "Your API ID From my.telegram.org",
+            "required": "True"
+        },
+        "DATABASE_URI": {
+            "description": "mongoDB URI. Get this value from https://www.mongodb.com. For more help watch this video - https://youtu.be/dsuTn4qV2GA",
+            "required": "True"
+        },
+        "DATABASE_NAME": {
+            "description": "Name of the database in mongoDB. For more help watch this video - https://youtu.be/dsuTn4qV2GA",
+            "required": "False"
+        },
+        "API_HASH": {
+            "description": "Your API Hash From my.telegram.org",
+            "required": "True"
+        }
+    }
+
+}
