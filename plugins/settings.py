@@ -4,6 +4,7 @@ from script import Script
 from pyrogram import Client, filters
 from .test import get_configs, update_configs, CLIENT, parse_buttons
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+import script
 
 CLIENT = CLIENT()
 
