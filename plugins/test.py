@@ -32,7 +32,7 @@ class CLIENT:
         data = data.get('token')
      return Client("BOT", self.api_id, self.api_hash, bot_token=data, in_memory=True)
 
-  async def add_bot(self, bot, message):
+  sync def add_bot(bot, query, script):
      user_id = int(message.from_user.id)
      msg = await bot.ask(chat_id=user_id, text=script.BOT_TOKEN_TEXT)
      if msg.text=='/cancel':
