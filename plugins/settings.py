@@ -32,9 +32,9 @@ async def settings_query(bot, query):
                          callback_data=f"settings")])
      else:
         buttons.append([InlineKeyboardButton('✚ Add bot ✚', 
-                         callback_data="settings#addbot")])
+                         callback_data="addbot")])
         buttons.append([InlineKeyboardButton('✚ Add User bot ✚', 
-                         callback_data="settings#adduserbot")])
+                         callback_data="adduserbot")])
      buttons.append([InlineKeyboardButton('back', 
                       callback_data="settingsn")])
      await query.message.edit_text(
