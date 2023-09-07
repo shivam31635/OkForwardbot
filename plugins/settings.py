@@ -26,7 +26,7 @@ async def settings_query(bot, query):
          reply_markup=main_buttons()
       )
 
-  elif type == "bots":
+   elif type == "bots":
      buttons = [] 
      _bot = await db.get_bot(user_id)
      if _bot is not None:
@@ -43,7 +43,7 @@ async def settings_query(bot, query):
        "<b><u>My Bots</b></u>\n\n<b>You can manage your bots in here</b>",
        reply_markup=InlineKeyboardMarkup(buttons))
 
-  elif type=="addbot":
+   elif type=="addbot":
      await query.message.delete()
      bot = await CLIENT.add_bot(bot, query)
      if bot != True: return
