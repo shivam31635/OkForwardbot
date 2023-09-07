@@ -26,7 +26,7 @@ async def settings_query(bot, query):
          reply_markup=main_buttons()
       )
 
-  elif type=="bots":
+  elif type == "bots":
      buttons = [] 
      _bot = await db.get_bot(user_id)
      if _bot is not None:
