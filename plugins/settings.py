@@ -1,6 +1,7 @@
 import asyncio 
 from database import Db, db
 from script import Script
+
 from pyrogram import Client, filters
 from .test import get_configs, update_configs, CLIENT, parse_buttons
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
@@ -36,7 +37,7 @@ async def settings_query(bot, query):
         buttons.append([InlineKeyboardButton('✚ Add User bot ✚', 
                          callback_data="adduserbot")])
      buttons.append([InlineKeyboardButton('back', 
-                      callback_data="settingsn")])
+                      callback_data="settings#main")])
      await query.message.edit_text(
        "<b><u>My Bots</b></u>\n\n<b>You can manage your bots in here</b>",
        reply_markup=InlineKeyboardMarkup(buttons))
@@ -66,7 +67,7 @@ async def settings_query(bot, query):
      buttons.append([InlineKeyboardButton('✚ Add Channel ✚', 
                       callback_data="settings#addchannel")])
      buttons.append([InlineKeyboardButton('back', 
-                      callback_data="settings")])
+                      callback_data="settings#main")])
      await query.message.edit_text( 
        "<b><u>My Channels</b></u>\n\n<b>you can manage your target chats in here</b>",
        reply_markup=InlineKeyboardMarkup(buttons))
