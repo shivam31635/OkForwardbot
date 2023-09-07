@@ -74,7 +74,7 @@ async def settings_query(bot, query):
 
   elif type=="addchannel":  
      await query.message.delete()
-     chat_ids = await Client.ask(chat_id=query.message.chat.id, text="<b>❪ SET TARGET CHAT ❫\n\nForward a message from Your target chat\n/cancel - cancel this process</b>")
+     chat_ids = await bot.ask(chat_id=query.message.chat.id, text="<b>❪ SET TARGET CHAT ❫\n\nForward a message from Your target chat\n/cancel - cancel this process</b>")
      if chat_ids.text=="/cancel":
         return await chat_ids.reply_text(
                   "<b>process canceled</b>",
