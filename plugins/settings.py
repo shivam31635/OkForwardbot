@@ -17,13 +17,14 @@ async def settings(client, message):
 
 @Client.on_callback_query(filters.regex(r'^settings'))
 async def settings_query(bot, query):
-  user_id = query.from_user.id
-  i, type = query.data.split("#")
-  buttons = [[InlineKeyboardButton('back', callback_data="settings#main")]]
-  if type=="main":
-     await query.message.edit_text(
-       "<b>change your settings as your wish</b>",
-       reply_markup=main_buttons())
+   user_id = query.from_user.id
+   i, type = query.data.split("#")
+   buttons = [[InlineKeyboardButton('back', callback_data="settings#main")]]
+   if type == "main":
+      await query.message.edit_text(
+         "<b>Change your settings as you wish</b>",
+         reply_markup=main_buttons()
+      )
 
   elif type=="bots":
      buttons = [] 
