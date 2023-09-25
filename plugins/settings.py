@@ -391,6 +391,8 @@ def main_buttons():
                     callback_data=f'settings#filters'),
        InlineKeyboardButton('♻️ ʙᴜᴛᴛᴏɴ',
                     callback_data=f'settings#button')
+       ],[
+       InlineKeyboardButton('• back', callback_data='help')
        ]]
   return InlineKeyboardMarkup(buttons)
 
